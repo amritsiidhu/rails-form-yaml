@@ -1,0 +1,17 @@
+<div class="govuk-form-group">
+    <%= form_for @upload, url: '/index'  do |f| %>
+      <h3 class="govuk-heading-m">Enter details</h3>
+        <% @form_format.each do |item| %>
+            <% item.each do |type, name| %>
+                <% if type == "label" %><br><br>
+                  <%= f.public_send("label", name, class: "govuk-label") %> 
+                <% end %>  
+                <% if type != "label" %>
+                  <%= f.public_send("text_field", name, class: "govuk-input") %>
+                <% end %>    
+            <% end %>
+        <% end %>
+        <br><br>
+      <%= f.submit "Upload", class: "govuk-button" %>
+    <% end %>
+</div>

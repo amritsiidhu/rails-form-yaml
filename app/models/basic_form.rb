@@ -1,0 +1,2 @@
+class BasicForm < ApplicationRecord
+end

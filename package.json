@@ -1,0 +1,7 @@
+{
+  "name": "test-app",
+  "private": true,
+  "dependencies": {
+    "govuk-frontend": "^2.10.0"
+  }
+}
